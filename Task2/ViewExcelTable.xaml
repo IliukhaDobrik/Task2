@@ -1,0 +1,32 @@
+﻿<Window x:Class="Task2.ViewExcelTable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Task2"
+        mc:Ignorable="d"
+        Title="ViewExcelTable" WindowState="Maximized">
+    <Grid>
+        <DataGrid x:Name="DataGrid" AutoGenerateColumns="False" ItemsSource="{Binding bankAccountData}">
+            <DataGrid.Columns>
+                <!-- Столбец с номером банковского счета -->
+                <DataGridTextColumn Header="Б/сч" Binding="{Binding AccountNumber}" />
+                
+                <!-- Столбец с номером класса -->
+                <DataGridTextColumn Header="Номер класса" Binding="{Binding Class}"/>
+
+                <!-- Столбцы для входящего сальдо -->
+                <DataGridTextColumn Header="Входящее сальдо - актив" Binding="{Binding IncomingBalanceAsset}" />
+                <DataGridTextColumn Header="Входящее сальдо - пассив" Binding="{Binding IncomingBalanceLiability}" />
+
+                <!-- Столбцы для оборотов -->
+                <DataGridTextColumn Header="Обороты - дебет" Binding="{Binding Debit}" />
+                <DataGridTextColumn Header="Обороты - кредит" Binding="{Binding Credit}" />
+
+                <!-- Столбцы для исходящего сальдо -->
+                <DataGridTextColumn Header="Исходящее сальдо - актив" Binding="{Binding OutgoingBalanceAsset}" />
+                <DataGridTextColumn Header="Исходящее сальдо - пассив" Binding="{Binding OutgoingBalanceLiability}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

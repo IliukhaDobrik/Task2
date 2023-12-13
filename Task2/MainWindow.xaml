@@ -7,8 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock VerticalAlignment="Top" Margin="0,120">Enter file path:</TextBlock>
-        <TextBox BorderBrush="Black"></TextBox>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,120">Enter file path:</TextBlock>
+        <TextBox x:Name="TextBox" Width="300" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150"></TextBox>
         <Button Content="ImportExcelToDB" Height="40" Width="100" BorderBrush="Black" Click="ButtonImport_OnClick"></Button>
+        
+        <Button Content="FilesList" Height="40" Width="100" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,130" Click="ButtonViewFiles_OnClick"></Button>
     </Grid>
 </Window>
